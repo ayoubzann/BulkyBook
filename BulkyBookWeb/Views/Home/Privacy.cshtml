@@ -1,6 +1,33 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
+ }
+<style>
+    #map {
+        height:400px;
+        width:400px;
+    }
+</style>
+<div class="row">
+    <div id="map"></div>
 
-<p>Use this page to detail your site's privacy policy.</p>
+    <script>
+var map;
+function initMap() {
+     const myLatLng = { lat: 59.949501907975154, lng: 10.765762182805894 };
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: myLatLng,
+        zoom: 16
+    });
+
+    new google.maps.Marker({
+    position: myLatLng  ,
+    map,
+    title: "Hello World!",
+  });
+}
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3-7Xjq97NFRpm947Rm9sQ9Zpk9LxW0F8&callback=initMap&v=weekly"
+      defer
+    ></script>
+</div>

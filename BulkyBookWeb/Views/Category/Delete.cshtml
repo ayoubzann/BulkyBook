@@ -1,23 +1,23 @@
-﻿@model Category
+﻿@model Movie
 
-<form method="post" asp-action="DeletePOST">
+<form method="post" asp-action="Delete">
     <input asp-for="Id" hidden />
     <div class="border p-3 mt-4">
         <div class="row pb-2">
-            <h2 class="text-primary text-white"> Delete Category</h2>
+            <h2 class="text-primary text-white"> Delete Movie</h2>
             <hr/>
         </div>
        @* <div asp-validation-summary="All"></div>*@
         <div class="mb-3">
-            <label asp-for="Name">Name</label>
-            <input asp-for="Name" disabled class="form-control" />
+            <label asp-for="Title">Title</label>
+            <input asp-for="Title" disabled class="form-control" />
         </div>
         <div class="mb-3">
-            <label asp-for="DisplayOrder"></label>
-            <input asp-for="DisplayOrder" disabled class="form-control" />
+            <label asp-for="ReleaseDate"></label>
+            <input asp-for="ReleaseDate" disabled class="form-control" />
         </div>
         <button type="submit" class="btn btn-danger" style="width:150px"> Delete</button>
-        <a asp-controller="Category" asp-action="Index" class="btn btn-secondary" style="width:150px">Back to list</a>
+        <a asp-controller="Movie" asp-action="Index" class="btn btn-secondary" style="width:150px">Back to list</a>
     </div>
 </form>
 
