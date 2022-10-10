@@ -16,7 +16,7 @@ namespace BulkyBookWeb.Models
         public int DisplayOrder { get; set; }
         public DateTime CreatedDateTime { get; set; } = DateTime.Now;
 
-        public ICollection<Movie> Movies { get; set; }
+        //public ICollection<Movie> Movies { get; set; }
 
     }
 }

@@ -15,7 +15,7 @@ namespace BulkyBookWeb.Models
         [DisplayName("Release date")]
         public DateTime ReleaseDate { get; set; } = DateTime.Now;
         
-        public Category Category { get; set; }
+        //public Category Category { get; set; }
     }
 
 }
